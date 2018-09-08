@@ -19,5 +19,6 @@ public class MainActivity extends AppCompatActivity {
         btn_externo=findViewById(R.id.btnexterno);
         btn_seridor=findViewById(R.id.btnservidor);
 
+
     }
 }
