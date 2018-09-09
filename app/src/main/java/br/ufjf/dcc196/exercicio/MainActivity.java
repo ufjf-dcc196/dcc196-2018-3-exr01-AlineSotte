@@ -15,33 +15,45 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);}
+        setContentView(R.layout.activity_main);
 
-        public void CarregarTelaServidor(){
-            setContentView(R.layout.activity_servidor);
-            btn_seridor=(Button)findViewById(R.id.btnservidor);
-            btn_seridor.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    CarregarTelaServ();
-                }
-            });
+        btn_seridor = (Button) findViewById(R.id.btnservidor);
+        btn_aluno = (Button) findViewById(R.id.btnaluno);
+        btn_externo = (Button) findViewById(R.id.btnexterno);
 
-        }
-
-        public void  CarregarTelaServ(){
-
-        Intent intent =new Intent(MainActivity.this, ServidorActivity.class );
-        startActivity(intent);
-        finish();
-        }
-
-//        btn_aluno=findViewById(R.id.btnaluno);
-//        btn_externo=findViewById(R.id.btnexterno);
+        btn_seridor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_servidor);
+            }
+        });
 
 
+        btn_aluno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_aluno);
+            }
+        });
 
 
-
+        btn_externo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_externo);
+            }
+        });
     }
+}
+
+
+
+
+
+
+
+
+
+
+
 
