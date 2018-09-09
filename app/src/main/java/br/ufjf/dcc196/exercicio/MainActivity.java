@@ -1,38 +1,45 @@
 package br.ufjf.dcc196.exercicio;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_externo;
-    private Button btn_seridor;
+    private Button btn_servidor;
     private Button btn_aluno;
+    private TextView edtnome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_seridor = (Button) findViewById(R.id.btnservidor);
-        btn_aluno = (Button) findViewById(R.id.btnaluno);
+        
+
         btn_externo = (Button) findViewById(R.id.btnexterno);
 
-        btn_seridor.setOnClickListener(new View.OnClickListener() {
+        
+        btn_servidor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_servidor);
+               Intent intent = new Intent(MainActivity.this, ServidorActivity.class);
+               intent.putExtra("nome",edtnome.getText().toString());
+               startActivity(intent);
             }
         });
 
-
+        btn_aluno = (Button) findViewById(R.id.btnaluno);
         btn_aluno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_aluno);
+                Intent intent = new Intent(MainActivity.this, AlunoActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -40,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         btn_externo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_externo);
+                Intent intent = new Intent(MainActivity.this, ExternoActivity.class);
+                startActivity(intent);
             }
         });
     }
