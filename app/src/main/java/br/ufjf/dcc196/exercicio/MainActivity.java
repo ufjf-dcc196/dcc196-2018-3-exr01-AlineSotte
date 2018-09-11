@@ -20,16 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        
-
-        btn_externo = (Button) findViewById(R.id.btnexterno);
-
-        
+        btn_servidor = (Button) findViewById(R.id.btnservidor);
         btn_servidor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                Intent intent = new Intent(MainActivity.this, ServidorActivity.class);
-               intent.putExtra("nome",edtnome.getText().toString());
                startActivity(intent);
             }
         });
@@ -43,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        btn_externo=(Button) findViewById(R.id.btnexterno);
         btn_externo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-}
 
+}
 
 
 
