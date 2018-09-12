@@ -16,7 +16,7 @@ public class ExternoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aluno);
+        setContentView(R.layout.activity_externo);
 
         edtnomeexter = (EditText) findViewById(R.id.editnomeexterno);
         edtemailext = (EditText) findViewById(R.id.editemailexterno);

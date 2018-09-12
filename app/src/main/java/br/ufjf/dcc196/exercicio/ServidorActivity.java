@@ -17,11 +17,11 @@ public class ServidorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aluno);
+        setContentView(R.layout.activity_servidor);
 
         edtnomeserv = (EditText) findViewById(R.id.editnameservidor);
         edtsiapserv = (EditText) findViewById(R.id.editsiapservidor);
-        butokserv = (Button) findViewById(R.id.btnexterno);
+        butokserv = (Button) findViewById(R.id.btnservidor);
 
         butokserv.setOnClickListener(new View.OnClickListener() {
             @Override
