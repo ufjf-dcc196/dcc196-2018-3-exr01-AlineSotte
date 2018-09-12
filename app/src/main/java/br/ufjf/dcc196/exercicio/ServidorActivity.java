@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class ServidorActivity extends AppCompatActivity {
     private EditText edtnomeserv, edtsiapserv;
-    private Button butolserv;
+    private Button butokserv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,9 @@ public class ServidorActivity extends AppCompatActivity {
 
         edtnomeserv = (EditText) findViewById(R.id.editnameservidor);
         edtsiapserv = (EditText) findViewById(R.id.editsiapservidor);
-        butolserv = (Button) findViewById(R.id.btnexterno);
+        butokserv = (Button) findViewById(R.id.btnexterno);
 
-        butolserv.setOnClickListener(new View.OnClickListener() {
+        butokserv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
