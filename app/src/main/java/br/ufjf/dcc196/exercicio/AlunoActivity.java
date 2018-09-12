@@ -21,7 +21,7 @@ public class AlunoActivity extends AppCompatActivity {
 
         edtnomeal=(EditText)findViewById(R.id.editnomealuno);
         edtemailal=(EditText)findViewById(R.id.editmatriculoaluno);
-        butokal=(Button)findViewById(R.id.btnaluno);
+        butokal=(Button)findViewById(R.id.btnOkaluno);
 
         butokal.setOnClickListener(new View.OnClickListener() {
             @Override
