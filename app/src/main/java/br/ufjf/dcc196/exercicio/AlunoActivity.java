@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class AlunoActivity extends AppCompatActivity {
 
     private EditText edtnomeal, edtemailal;
-    private Button butok;
+    private Button butokal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,9 @@ public class AlunoActivity extends AppCompatActivity {
 
         edtnomeal=(EditText)findViewById(R.id.editnomealuno);
         edtemailal=(EditText)findViewById(R.id.editmatriculoaluno);
-        butok=(Button)findViewById(R.id.btnaluno);
+        butokal=(Button)findViewById(R.id.btnaluno);
 
-        butok.setOnClickListener(new View.OnClickListener() {
+        butokal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
