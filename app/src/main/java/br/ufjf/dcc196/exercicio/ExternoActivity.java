@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class ExternoActivity extends AppCompatActivity {
 
@@ -20,7 +19,7 @@ public class ExternoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_aluno);
 
         edtnomeexter = (EditText) findViewById(R.id.editnomeexterno);
-        edtemailext = (EditText) findViewById(R.id.editText3);
+        edtemailext = (EditText) findViewById(R.id.editemailexterno);
         butokext = (Button) findViewById(R.id.btnOkexterno);
 
         butokext.setOnClickListener(new View.OnClickListener() {

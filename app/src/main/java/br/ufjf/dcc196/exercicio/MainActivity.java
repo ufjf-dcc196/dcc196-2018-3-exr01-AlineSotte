@@ -16,22 +16,35 @@ public class MainActivity extends AppCompatActivity {
     public static  final String SERVIDOR_SIAP= "siap";
     public static final String EXTERNO_NOME ="nome";
     public static  final String EXTERNO_EMAIL= "email";
+
     private Button btn_externo;
     private Button btn_servidor;
     private Button btn_aluno;
-    private TextView edtnome;
+
+    private TextView texmens;
+    private TextView texalun;
+    private TextView texserv;
+    private TextView texextr;
+
+    private int contaluno, contservidor, contexterno;
+
+    private static final int REQUEST_ALUNO=2;
+    private static final int REQUEST_SERVIDOR=1;
+    private static final int REQUEST_EXTERNO=3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         btn_servidor = (Button)findViewById(R.id.btnservidor);
         btn_servidor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                Intent intent = new Intent(MainActivity.this, ServidorActivity.class);
-               startActivity(intent);
+               startActivityForResult(intent,MainActivity.REQUEST_SERVIDOR);
             }
         });
 
@@ -40,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AlunoActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,MainActivity.REQUEST_ALUNO);
             }
         });
 
@@ -49,11 +62,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ExternoActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, MainActivity.REQUEST_EXTERNO);
             }
         });
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+
+    }
 }
 
 
