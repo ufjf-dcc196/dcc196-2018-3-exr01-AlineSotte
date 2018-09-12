@@ -26,11 +26,10 @@ public class AlunoActivity extends AppCompatActivity {
         butokal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-
-                intent.putExtra(MainActivity.ALUNO_NOME, edtnomeal.getText().toString());
-                intent.putExtra(MainActivity.ALUNO_MATRICULA, edtemailal.getText().toString());
-                setResult(Activity.RESULT_OK, intent);
+                Intent intent_aluno = new Intent();
+                intent_aluno.putExtra(MainActivity.ALUNO_NOME, edtnomeal.getText().toString());
+                intent_aluno.putExtra(MainActivity.ALUNO_MATRICULA, edtemailal.getText().toString());
+                setResult(Activity.RESULT_OK, intent_aluno);
                 finish();
                 }
         });

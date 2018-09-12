@@ -25,11 +25,11 @@ public class ExternoActivity extends AppCompatActivity {
         butokext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
+                Intent intent_externo = new Intent();
 
-                intent.putExtra(MainActivity.EXTERNO_NOME, edtnomeexter.getText().toString());
-                intent.putExtra(MainActivity.EXTERNO_EMAIL, edtemailext.getText().toString());
-                setResult(Activity.RESULT_OK, intent);
+                intent_externo.putExtra(MainActivity.EXTERNO_NOME, edtnomeexter.getText().toString());
+                intent_externo.putExtra(MainActivity.EXTERNO_EMAIL, edtemailext.getText().toString());
+                setResult(Activity.RESULT_OK, intent_externo);
                 finish();
             }
         });

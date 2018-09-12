@@ -26,11 +26,11 @@ public class ServidorActivity extends AppCompatActivity {
         butokserv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
+                Intent intent_servidor = new Intent();
 
-                intent.putExtra(MainActivity.SERVIDOR_NOME, edtnomeserv.getText().toString());
-                intent.putExtra(MainActivity.SERVIDOR_SIAP, edtsiapserv.getText().toString());
-                setResult(Activity.RESULT_OK, intent);
+                intent_servidor.putExtra(MainActivity.SERVIDOR_NOME, edtnomeserv.getText().toString());
+                intent_servidor.putExtra(MainActivity.SERVIDOR_SIAP, edtsiapserv.getText().toString());
+                setResult(Activity.RESULT_OK, intent_servidor);
                 finish();
             }
         });
