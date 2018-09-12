@@ -10,6 +10,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String ALUNO_NOME ="nome";
+    public static  final String ALUNO_MATRICULA= "matricula";
+    public static final String SERVIDOR_NOME ="nome";
+    public static  final String SERVIDOR_SIAP= "siap";
+    public static final String EXTERNO_NOME ="nome";
+    public static  final String EXTERNO_EMAIL= "email";
     private Button btn_externo;
     private Button btn_servidor;
     private Button btn_aluno;
@@ -20,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_servidor = (Button) findViewById(R.id.btnservidor);
+        btn_servidor = (Button)findViewById(R.id.btnservidor);
         btn_servidor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_aluno = (Button) findViewById(R.id.btnaluno);
+        btn_aluno = (Button)findViewById(R.id.btnaluno);
         btn_aluno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_externo=(Button) findViewById(R.id.btnexterno);
+        btn_externo=(Button)findViewById(R.id.btnexterno);
         btn_externo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
