@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private int contaluno, contservidor, contexterno;
 
     private static final int REQUEST_ALUNO=1;
-    private static final int REQUEST_SERVIDOR=0;
-    private static final int REQUEST_EXTERNO=2;
+    private static final int REQUEST_SERVIDOR=2;
+    private static final int REQUEST_EXTERNO=3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         texmens=(EditText)findViewById(R.id.textmensagem);
-        texalun=(EditText)findViewById(R.id.textservidor);
-        texextr=(EditText)findViewById(R.id.textaluno);
         texserv=(EditText)findViewById(R.id.textservidor);
+        texalun=(EditText)findViewById(R.id.textaluno);
+        texextr=(EditText)findViewById(R.id.textexterno);
 
         btn_servidor = (Button)findViewById(R.id.btnservidor);
         btn_servidor.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             String siapservidorr=bundleResultado.getString(MainActivity.SERVIDOR_SIAP);
             texmens.setText("Nome Servidor:"+nomeservidorr +"SIAP:"+siapservidorr);
             contservidor++;
-            texalun.setText("Servido"+contservidor);
+            texalun.setText("Servidor"+contservidor);
         }
 
         else if(requestCode==MainActivity.REQUEST_ALUNO
