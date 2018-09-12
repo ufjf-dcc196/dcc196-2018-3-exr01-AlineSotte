@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundleResultado=data.getExtras();
             String nomeservidorr=bundleResultado.getString(MainActivity.SERVIDOR_NOME);
             String siapservidorr=bundleResultado.getString(MainActivity.SERVIDOR_SIAP);
-            texmens.setText("Nome Servidor:"+nomeservidorr +"SIAP:"+siapservidorr);
+            texmens.setText("Nome :"+nomeservidorr +"SIAP:"+siapservidorr);
             contservidor++;
             texalun.setText("Servidor"+contservidor);
         }
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundleResultado=data.getExtras();
             String nomealluno=bundleResultado.getString(MainActivity.ALUNO_NOME);
             String matriculaalluno=bundleResultado.getString(MainActivity.ALUNO_MATRICULA);
-            texmens.setText("Nome Servidor:"+ nomealluno +"matricula:"+ matriculaalluno);
+            texmens.setText("Nome:"+ nomealluno +"matricula:"+ matriculaalluno);
             contaluno++;
             texserv.setText("aluno=" + contaluno);
 
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundleResultado=data.getExtras();
             String nomeexternoo=bundleResultado.getString(MainActivity.EXTERNO_NOME);
             String emailexternoo=bundleResultado.getString(MainActivity.EXTERNO_EMAIL);
-            texmens.setText("Nome Servidor:"+ nomeexternoo +"matricula:"+ emailexternoo);
+            texmens.setText("Nome:"+ nomeexternoo +"email:"+ emailexternoo);
             contexterno++;
             texextr.setText("Externo:" + contexterno);
 
